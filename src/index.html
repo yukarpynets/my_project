@@ -1,23 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vanilla App Template</title>
-    <link rel="stylesheet" href="./css/styles.css" />
-  </head>
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vanilla App Template</title>
+  <link rel="stylesheet" href="./css/styles.css" />
+</head>
+
+<body>
+
   <body>
+    <!-- SVG Sprite inline — DEVE stare qui, prima di tutto il resto -->
+    <div hidden>
+      <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <defs>
+          <!-- incolla qui tutto il contenuto dei <symbol> dal tuo symbol-defs.svg -->
+          <symbol id="icon-facebook" viewBox="0 0 32 32">...</symbol>
+          <symbol id="icon-instagram" viewBox="0 0 32 32">...</symbol>
+          <symbol id="icon-youtube" viewBox="0 0 32 32">...</symbol>
+          <symbol id="icon-logo" viewBox="0 0 176 32">...</symbol>
+        </defs>
+      </svg>
+    </div>
     <load src="./partials/header.html" icon-path="img/sprite.svg#logo" />
 
     <main>
       <!-- Loads the specified .html file -->
-      <load src="./partials/vite-promo.html" />
-      <load src="./partials/badges.html" />
+
     </main>
 
     <load src="./partials/footer.html" />
 
     <script type="module" src="./main.js"></script>
   </body>
+
 </html>

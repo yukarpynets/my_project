@@ -1,18 +1,311 @@
-/**
-  |============================
-  | include css partials with
-  | default @import url()
-  |============================
-*/
-/* Common styles */
-@import url('./reset.css');
-@import url('./base.css');
-@import url('./container.css');
-@import url('./animations.css');
+/* ============================================================
+   FOOTER — YourEnergy
+   Desktop: 1440px wide, 328px height
+   padding-top: 64px, padding-bottom: 16px
+   ============================================================ */
 
-/* Sections style */
-@import url('./header.css');
-@import url('./vite-promo.css');
-@import url('./badges.css');
-@import url('./back-link.css');
-@import url('./footer.css');
+.footer {
+  --color1: #f4f4f4;
+  background-color: #1c1c1c;
+  color: #fff;
+}
+
+/* ---- Container principale ---- */
+.footer__container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 64px 80px 40px;
+  display: flex;
+  align-items: flex-start;
+  gap: 40px;
+
+}
+
+/* ==============================
+   LEFT — Logo + Social icons
+   ============================== */
+.footer__left {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  flex-shrink: 0;
+}
+
+.footer__logo {
+  display: inline-flex;
+  text-decoration: none;
+}
+
+.footer__logo-svg {
+  display: block;
+}
+
+.footer__socials {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 14px;
+}
+
+.footer__social-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border-radius: 10px;
+  border: 1px solid rgba(244, 244, 244, 0.10);
+  text-decoration: none;
+  transition: background 0.25s ease, border-color 0.25s ease, border-radius 0.25s ease;
+}
+
+.footer__social-link:hover,
+.footer__social-link:focus-visible {
+  border-radius: 10px;
+  border: 1px solid rgba(244, 244, 244, 0.10);
+  background: #f4f4f4;
+  outline: none;
+  /* Icona diventa scura sull'hover */
+  --color1: #242424;
+}
+
+/* ==============================
+   CENTER — Slogan
+   ============================== */
+.footer__center {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 24px;
+}
+
+.footer__slogan {
+  margin: 0;
+  font-size: 48px;
+  font-weight: 400;
+  line-height: 1.1;
+  color: #fff;
+}
+
+.footer__slogan em {
+  font-style: italic;
+}
+
+/* ==============================
+   RIGHT — Subscribe form
+   ============================== */
+.footer__right {
+  flex-shrink: 0;
+  width: 310px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.footer__subscribe-text {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.5;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.footer__form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.footer__input-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.footer__input {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 14px 20px;
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 30px;
+  font-size: 14px;
+  color: #fff;
+  outline: none;
+  transition: border-color 0.2s ease;
+}
+
+.footer__input::placeholder {
+  color: rgba(255, 255, 255, 0.35);
+}
+
+.footer__input:focus {
+  border-color: rgba(255, 255, 255, 0.7);
+}
+
+.footer__input.is-invalid {
+  border-color: #e74c3c;
+}
+
+.footer__input.is-valid {
+  border-color: #27ae60;
+}
+
+/* Errore — nascosto di default, visibile solo con .visible */
+.footer__error {
+  display: none;
+  margin: 0;
+  padding-left: 16px;
+  font-size: 11px;
+  color: #e74c3c;
+}
+
+.footer__error.visible {
+  display: block;
+}
+
+.footer__btn {
+  width: 100%;
+  padding: 14px;
+  background: #fff;
+  color: #1c1c1c;
+  border: none;
+  border-radius: 30px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.1s ease;
+}
+
+.footer__btn:hover {
+  background: #f0f0f0;
+}
+
+.footer__btn:active {
+  transform: scale(0.98);
+}
+
+.footer__btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* ==============================
+   BOTTOM BAR
+   padding-bottom: 16px
+   ============================== */
+.footer__bottom {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 16px 80px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.footer__copy,
+.footer__year {
+  margin: 0;
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.35);
+}
+
+.footer__legal {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.35);
+}
+
+.footer__legal a {
+  color: rgba(255, 255, 255, 0.35);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.footer__legal a:hover {
+  color: #fff;
+}
+
+/* ============================================================
+   TABLET  768px – 1279px
+   ============================================================ */
+@media (max-width: 1279px) {
+  .footer__container {
+    padding: 48px 40px 40px;
+    flex-wrap: wrap;
+    row-gap: 32px;
+  }
+
+  .footer__center {
+    order: -1;
+    width: 100%;
+    padding: 0;
+    justify-content: flex-start;
+  }
+
+  .footer__slogan {
+    font-size: 36px;
+  }
+
+  .footer__left {
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .footer__right {
+    width: 100%;
+  }
+
+  .footer__bottom {
+    padding: 16px 40px;
+  }
+}
+
+/* ============================================================
+   MOBILE  < 768px
+   ============================================================ */
+@media (max-width: 767px) {
+  .footer__container {
+    padding: 40px 20px 32px;
+    flex-direction: column;
+    gap: 28px;
+  }
+
+  .footer__center {
+    order: 0;
+  }
+
+  .footer__slogan {
+    font-size: 28px;
+  }
+
+  .footer__left {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .footer__right {
+    width: 100%;
+  }
+
+  .footer__bottom {
+    padding: 16px 20px;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .footer__copy {
+    width: 100%;
+  }
+}

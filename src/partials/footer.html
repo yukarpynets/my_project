@@ -1,15 +1,71 @@
 <footer class="footer">
-  <div class="container">
-    <p class="footer-desc">
-      Made with ✨ by
-      <a
-        class="footer-link"
-        href="https://goit.global/ua/"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        GoIT team
+  <div class="footer__container">
+
+    <!-- LEFT: Logo + socials -->
+    <div class="footer__left">
+      <a href="/" class="footer__logo" aria-label="Your Energy — home">
+        <svg class="footer__logo-svg" width="176" height="32">
+          <use href="public/symbol-defs.svg#icon-logo"></use>
+        </svg>
       </a>
-    </p>
+
+      <ul class="footer__socials">
+        <li>
+          <a href="https://www.facebook.com/goITclub/" target="_blank" rel="noopener noreferrer" aria-label="Facebook"
+            class="footer__social-link">
+            <svg width="28" height="28">
+              <use href="public/symbol-defs.svg#icon-facebook"></use>
+            </svg>
+          </a>
+        </li>
+        <li>
+          <a href="https://www.instagram.com/goitclub/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"
+            class="footer__social-link">
+            <svg width="28" height="28">
+              <use href="public/symbol-defs.svg#icon-instagram"></use>
+            </svg>
+          </a>
+        </li>
+        <li>
+          <a href="https://www.youtube.com/c/GoIT" target="_blank" rel="noopener noreferrer" aria-label="YouTube"
+            class="footer__social-link">
+            <svg width="28" height="28">
+              <use href="public/symbol-defs.svg#icon-youtube"></use>
+            </svg>
+          </a>
+        </li>
+      </ul>
+    </div>
+
+    <!-- CENTER: Slogan -->
+    <div class="footer__center">
+      <p class="footer__slogan">
+        Transforming your <em>body</em><br />shape with us
+      </p>
+    </div>
+
+    <!-- RIGHT: Subscribe form -->
+    <div class="footer__right">
+      <p class="footer__subscribe-text">Subscribe and learn about new exercises!</p>
+      <form class="footer__form" id="subscriptionForm" novalidate>
+        <div class="footer__input-wrap">
+          <input class="footer__input" type="email" id="subscriptionEmail" name="email" placeholder="Email" required />
+          <p class="footer__error" id="emailError">Please enter a valid email address</p>
+        </div>
+        <button class="footer__btn" type="submit">Send</button>
+      </form>
+    </div>
+
+  </div>
+
+  <!-- Bottom bar -->
+  <div class="footer__bottom">
+    <p class="footer__copy">Your Energy. All rights reserved.</p>
+    <ul class="footer__legal">
+      <li><a href="#">Privacy Policy</a></li>
+      <li>/</li>
+      <li><a href="#">Terms of Service</a></li>
+    </ul>
+    <p class="footer__year">©2023</p>
   </div>
 </footer>
